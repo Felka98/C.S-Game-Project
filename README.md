@@ -1,1 +1,1 @@
-15 en fichas!
+Juego de 15 en fichas
