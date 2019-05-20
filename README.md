@@ -1,3 +1,6 @@
+Recopilacion de scripts para intro a compu :)
+Proyecto
+
 Juego de 15 en fichas
   En este juego se dispone de una banda numérica del 1 al 9
 y de 3 fichas rotuladas con una “u” (para el usuario) y 3 fichas rotuladas con una “c” (para la
