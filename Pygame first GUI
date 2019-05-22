@@ -1,0 +1,28 @@
+import pygame,sys
+from pygame.locals import *
+pygame.init()
+color=(43,41,160)
+fuente=pygame.font.SysFont("Arial",25)
+texto=fuente.render("Pulsa 0 para piedra,1 para papel y 2 para tijera",0,(0,0,0))
+piedra=pygame.image.load("Piedra.png")
+papel=pygame.image.load("Papel.JPG")
+tijera=pygame.image.load("tijera.png")
+yAxis=300
+def adjust_size(image):
+    return pygame.transform.scale(image,(75,75))
+ventana=pygame.display.set_mode((600,500))
+pygame.display.set_caption("Rock,Paper,Scissors")
+while True:
+    ventana.fill(color)
+    ventana.blit(texto,(40,150))
+    ventana.blit(adjust_size(piedra),(75,yAxis))
+    ventana.blit(adjust_size(papel),(250,yAxis))  # La diferencia en eje X entre imagenes es de 200 pixeles.
+    ventana.blit(adjust_size(tijera),(450,yAxis))
+    for event in pygame.event.get():
+        if event.type==KEYDOWN:
+            if event.key==pygame.K_0:
+                print("hello world")
+        if event.type==QUIT:
+            pygame.quit()
+            sys.exit()
+    pygame.display.update()
